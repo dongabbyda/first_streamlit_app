@@ -31,7 +31,8 @@ fruit_choice = st.text_input('What food would you like information about?', 'kiw
 st.write('user entered fruit choice',fruit_choice)
 
 import requests
-fruity_response = requests.get("https://fruityvice.com/api/fruit/"+"kiwi")
+fruity_response = requests.get("https://fruityvice.com/api/fruit/" + "kiwi")
+st.text(fruity_response.json())
 #normalize json file
 fruity_norm = pd.josn_normalize(fruity_response.json())
 #output as table
