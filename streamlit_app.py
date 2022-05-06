@@ -25,4 +25,7 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 #show the table ont the page
 st.dataframe(fruits_to_show)
 
-
+#api response
+import requests
+fruity_reponse = requests.get("https://fruityvice.com/api/fruit/watermelon")
+st.text(fruity_response)
