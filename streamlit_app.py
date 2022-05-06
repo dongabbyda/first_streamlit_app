@@ -27,5 +27,5 @@ st.dataframe(fruits_to_show)
 
 #api response
 import requests
-fruity_reponse = requests.get("https://fruityvice.com/api/fruit/watermelon")
+fruity_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
 st.text(fruity_response)
