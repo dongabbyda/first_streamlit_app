@@ -34,6 +34,6 @@ import requests
 fruity_response = requests.get("https://fruityvice.com/api/fruit/" + "kiwi")
 st.text(fruity_response.json())
 #normalize json file
-fruity_norm = josn_normalize(fruity_response.json())
+fruity_norm = pd.json_normalize(fruity_response.json())
 #output as table
 st.dataframe(fruity_norm)
