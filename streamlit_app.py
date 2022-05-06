@@ -33,6 +33,6 @@ st.write('user entered fruit choice',fruit_choice)
 import requests
 fruity_response = requests.get("https://fruityvice.com/api/fruit/"+"kiwi")
 #normalize json file
-fruity_norm = pandas.josn_normalize(fruity_response.json())
+fruity_norm = pd.josn_normalize(fruity_response.json())
 #output as table
 st.dataframe(fruity_norm)
