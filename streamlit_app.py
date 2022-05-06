@@ -26,6 +26,13 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 st.dataframe(fruits_to_show)
 
 #api response
+st.header("Fruityvice Fruit Advice!")
+fruit_choice = st.text_input('What food would you like information about?', 'kiwi')
+st.write('user entered fruit choice',fruit_choice)
+
 import requests
-fruity_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
-st.text(fruity_response)
+fruity_response = requests.get("https://fruityvice.com/api/fruit/"+"kiwi")
+#normalize json file
+fruity_norm = pandas.josn_normalize(fruity_response.json())
+#output as table
+st.dataframe(fruity_norm)
